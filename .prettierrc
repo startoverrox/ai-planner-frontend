@@ -1,0 +1,29 @@
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "singleAttributePerLine": false,
+  "bracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "semi": false,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "all",
+  "useTabs": true,
+  "embeddedLanguageFormatting": "auto",
+  "experimentalTernaries": false,
+  "plugins": ["prettier-plugin-tailwindcss"],
+  "tailwindPreserveWhitespace": true,
+  "overrides": [
+    {
+      "files": "README.md",
+      "options": {
+        "printWidth": 100
+      }
+    }
+  ]
+}
