@@ -2,6 +2,143 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* font */
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 100;
+	font-display: swap;
+	src: url(src/assets/fonts/Pretendard-Thin.woff) format('woff');
+}
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 200;
+	font-display: swap;
+	src: url(src/assets/fonts/Pretendard-ExtraLight.woff) format('woff');
+}
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 300;
+	font-display: swap;
+	src: url(src/assets/fonts/Pretendard-Light.woff) format('woff');
+}
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 400;
+	font-display: swap;
+	src: url(src/assets/fonts/Pretendard-Regular.woff) format('woff');
+}
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 500;
+	font-display: swap;
+	src: url(src/assets/fonts/Pretendard-Medium.woff) format('woff');
+}
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 600;
+	font-display: swap;
+	src: url(src/assets/fonts/Pretendard-SemiBold.woff) format('woff');
+}
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 700;
+	font-display: swap;
+	src: url(src/assets/fonts/Pretendard-Bold.woff) format('woff');
+}
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 800;
+	font-display: swap;
+	src: url(src/assets/fonts/Pretendard-ExtraBold.woff) format('woff');
+}
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 900;
+	font-display: swap;
+	src: url(src/assets/fonts/Pretendard-Black.woff) format('woff');
+}
+
+@layer theme {
+	:root {
+		--font-display: 'Pretendard', sans-serif;
+
+		--text-S-100: 0.5rem; /* 8px */
+		--text-S-200: 1rem; /* 16px */
+		--text-S-300: 1.5rem; /* 24px */
+		--text-S-400: 2rem; /* 32px */
+		--text-S-500: 2.5rem; /* 40px */
+
+		--text-M-100: 3.5rem; /* 56px */
+		--text-M-200: 4rem; /* 64px */
+		--text-M-300: 4.5rem; /* 72px */
+
+		/* S: distance between small components */
+		--spacing-S-100: 0.5rem; /* 8px */
+		--spacing-S-200: 1rem; /* 16px */
+		--spacing-S-300: 1.5rem; /* 24px */
+		--spacing-S-400: 2rem; /* 32px */
+		--spacing-S-500: 2.5rem; /* 40px */
+
+		/* M: distance between groups */
+		--spacing-M-100: 3.5rem; /* 56px */
+		--spacing-M-200: 4rem; /* 64px */
+		--spacing-M-300: 4.5rem; /* 72px */
+
+		/* L: distance between sections */
+		--spacing-L-100: 5rem; /* 80px */
+		--spacing-L-200: 6rem; /* 96px */
+		--spacing-L-300: 7rem; /* 112px */
+		--spacing-L-400: 8rem; /* 128px */
+		--spacing-L-500: 9rem; /* 144px */
+		--spacing-L-600: 10rem; /* 160px */
+		--spacing-L-700: 11rem; /* 176px */
+		--spacing-L-800: 12rem; /* 192px */
+		--spacing-L-900: 13rem; /* 208px */
+		--spacing-L-1000: 14rem; /* 224px */
+
+		--breakpoint-mobile: 30rem;
+		--breakpoint-tablet: 48rem;
+		--breakpoint-desktop: 64rem;
+		--breakpoint-large: 80rem;
+
+		--color-primary: #166534;
+		--color-muted: #e5e5e5;
+		--color-tertiary: #94a3b8;
+		--color-surface: #ffffff;
+		--color-accent: #64748b;
+		--color-secondary: #dcfce7;
+		--color-content: #0f172a;
+		--color-background: #f8fafc;
+
+		/* --drop-shadow-3xl: 0 4px 10px rgba(176, 176, 254, 0.5);
+  		--drop-shawow-4xl: 2px 4px 10px rgba(25, 40, 110, 0.2); */
+	}
+
+	:root.dark {
+		--color-primary: #4ade80;
+		--color-muted: #334155;
+		--color-tertiary: #64748b;
+		--color-surface: #1e293b;
+		--color-accent: #94a3b8;
+		--color-secondary: #064e3b;
+		--color-content: #f1f5f9;
+		--color-background: #0f172a;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		:root {
+			--color-primary: #4ade80;
+			--color-muted: #334155;
+			--color-tertiary: #64748b;
+			--color-surface: #1e293b;
+			--color-accent: #94a3b8;
+			--color-secondary: #064e3b;
+			--color-content: #f1f5f9;
+			--color-background: #0f172a;
+		}
+	}
+}
+
 /* reset css */
 @layer base {
 	* {
@@ -61,68 +198,27 @@
 	}
 }
 
-/* font */
-@font-face {
-	font-family: 'Pretendard';
-	font-weight: 100;
-	font-display: swap;
-	src: url(src/assets/fonts/Pretendard-Thin.woff) format('woff');
-}
-@font-face {
-	font-family: 'Pretendard';
-	font-weight: 200;
-	font-display: swap;
-	src: url(src/assets/fonts/Pretendard-ExtraLight.woff) format('woff');
-}
-@font-face {
-	font-family: 'Pretendard';
-	font-weight: 300;
-	font-display: swap;
-	src: url(src/assets/fonts/Pretendard-Light.woff) format('woff');
-}
-@font-face {
-	font-family: 'Pretendard';
-	font-weight: 400;
-	font-display: swap;
-	src: url(src/assets/fonts/Pretendard-Regular.woff) format('woff');
-}
-@font-face {
-	font-family: 'Pretendard';
-	font-weight: 500;
-	font-display: swap;
-	src: url(src/assets/fonts/Pretendard-Medium.woff) format('woff');
-}
-@font-face {
-	font-family: 'Pretendard';
-	font-weight: 600;
-	font-display: swap;
-	src: url(src/assets/fonts/Pretendard-SemiBold.woff) format('woff');
-}
-@font-face {
-	font-family: 'Pretendard';
-	font-weight: 700;
-	font-display: swap;
-	src: url(src/assets/fonts/Pretendard-Bold.woff) format('woff');
-}
-@font-face {
-	font-family: 'Pretendard';
-	font-weight: 800;
-	font-display: swap;
-	src: url(src/assets/fonts/Pretendard-ExtraBold.woff) format('woff');
-}
-@font-face {
-	font-family: 'Pretendard';
-	font-weight: 900;
-	font-display: swap;
-	src: url(src/assets/fonts/Pretendard-Black.woff) format('woff');
-}
-
 /* project style */
 @layer base {
+	/* html {
+		font-family: var(--font-display);
+	} */
+
 	body {
 		font-family: 'Pretendard', 'Malgun Gothic', sans-serif;
 	}
 }
 
 @layer components {
+	/* .btn {
+		padding: 0.5rem 1rem;
+		background-color: var(--color-primary);
+		border-radius: 4px;
+	} */
+}
+
+@layer utilities {
+	/* .text-center {
+		text-align: center;
+	} */
 }
