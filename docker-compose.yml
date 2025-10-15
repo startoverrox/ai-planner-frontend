@@ -1,0 +1,14 @@
+networks:
+  ai-planner-network:
+    external: true
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ai-planner-frontend
+    ports:
+      - "3000:80"
+    networks:
+      - ai-planner-network
