@@ -18,16 +18,14 @@ comming soon
 
 ```
 ├── src
-│   ├── assets/            # images, icons
-│   ├── components/        # shared components
-│   ├── routes/            # react-router
-│   ├── services/          # axios requests
+│   ├── api/               # api requests
+│   ├── assets/            # assets
+│   ├── feature/           # feature components
+│   ├── router/            # react-router
+│   ├── shared/            # shared components
 │   ├── store/             # zustand store
-│   ├── types/             # typescript types
-│   ├── utils/             # utility functions
 │   ├── App.tsx            # main app component
 │   ├── global.css         # global styles
-│   ├── vite.config.ts     # vite config
 │   ├── ...
 ```
 
