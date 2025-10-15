@@ -9,15 +9,34 @@
   "printWidth": 80,
   "proseWrap": "preserve",
   "quoteProps": "as-needed",
-  "semi": false,
-  "singleQuote": true,
+  "semi": true,
+  "singleQuote": false,
   "tabWidth": 2,
   "trailingComma": "all",
-  "useTabs": true,
+  "useTabs": false,
   "embeddedLanguageFormatting": "auto",
   "experimentalTernaries": false,
-  "plugins": ["prettier-plugin-tailwindcss"],
+  "plugins": [
+    "@trivago/prettier-plugin-sort-imports",
+    "prettier-plugin-tailwindcss"
+  ],
   "tailwindPreserveWhitespace": true,
+  "importOrder": [
+    "^react$",
+    "^react-router$",
+    "<THIRD_PARTY_MODULES>",
+    "^@/assets/(.*)$",
+    "^@/router/(.*)$",
+    "^@/shared/(.*)$",
+    "^@/utils/(.*)$",
+    "^@/types/(.*)$",
+    "^@/store/(.*)$",
+    "^@/api/(.*)$",
+    "^@/feature/(.*)$",
+    "^[./]"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
   "overrides": [
     {
       "files": "README.md",

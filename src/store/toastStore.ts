@@ -1,16 +1,17 @@
-import { create } from 'zustand'
-import type { Toast, ToastSet } from '@/types/toast'
-import { devtools } from 'zustand/middleware'
+import { create } from "zustand";
+import { devtools } from "zustand/middleware";
+
+import type { Toast, ToastSet } from "@/shared/types/toast";
 
 const useToastStore = create<ToastSet>()(
-	devtools(
-		(set) => ({
-			toast: null,
-			setToast: (toast: Toast) => set({ toast }),
-			clearToast: () => set({ toast: null }),
-		}),
-		{ name: 'toastStore' },
-	),
-)
+  devtools(
+    (set) => ({
+      toast: null,
+      setToast: (toast: Toast) => set({ toast }),
+      clearToast: () => set({ toast: null }),
+    }),
+    { name: "toastStore" },
+  ),
+);
 
-export default useToastStore
+export default useToastStore;
